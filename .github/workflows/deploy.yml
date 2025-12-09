@@ -13,4 +13,8 @@ steps:
   run: npm install
 
 -name : Deploy
+
+  env:
+    SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+    SANITY_STUDIO_HOST: ${{ secrets.SANITY_STUDIO_HOST }}
  run: npm run deploy -- --yes
